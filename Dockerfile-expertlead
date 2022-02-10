@@ -1,0 +1,5 @@
+FROM klokantech/osmnames-sphinxsearch:2.0.6
+WORKDIR /data/input
+RUN curl -s -L https://github.com/OSMNames/OSMNames/releases/download/v2.1.1/planet-latest-100k_geonames.tsv.gz -o data.tsv.gz
+EXPOSE 80
+CMD ["/usr/local/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]

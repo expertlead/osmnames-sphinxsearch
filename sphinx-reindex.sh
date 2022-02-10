@@ -10,7 +10,7 @@ echo "Started: $START"
 if [ ! -f /data/input/data.tsv -a ! -f /data/input/data.tsv.gz ]; then
     mkdir -p /data/input/
     curl -L -s https://github.com/OSMNames/OSMNames/releases/download/v2.1.1/planet-latest-100k_geonames.tsv.gz \
-        -o /data/input/planet-v2.0.4-100k_geonames.tsv.gz
+        -o /data/input/planet-latest-100k_geonames.tsv.gz
     ln /data/input/planet-latest-100k_geonames.tsv.gz /data/input/data.tsv.gz
 fi
 
